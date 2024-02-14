@@ -51,19 +51,23 @@ const AppSidebar = () => {
             },
           }}
         >
-          <div className="flex justify-between items-center p-3 border-b mb-6">
+          <div className="flex justify-between items-center px-4 h-[61px] border-b mb-6">
             <img
-              src="/logo.png"
+              src="/logo.svg"
               alt=""
+              height="100px"
+              // style={{ height: "60px" }}
               onClick={() => setCollapsed(!collapsed)}
               className="cursor-pointer"
             />
-            <DoubleArrowLeftIcon
-              height="20px"
-              width="20px"
-              onClick={() => setCollapsed(!collapsed)}
-              className="cursor-pointer"
-            />
+            <button>
+              <img
+                src="/icons/sidebar-left.svg"
+                alt=""
+                onClick={() => setCollapsed(!collapsed)}
+                className="cursor-pointer"
+              />
+            </button>
           </div>
 
           <MenuItem

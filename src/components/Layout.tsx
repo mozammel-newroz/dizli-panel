@@ -5,7 +5,7 @@ import AppSidebar from "./AppSidebar";
 
 const Layout = () => {
   return (
-    <div className="flex gap-10">
+    <div className="flex">
       <AppSidebar />
       <Outlet />
     </div>
