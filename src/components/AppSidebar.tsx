@@ -1,6 +1,7 @@
 import {
   ArchiveIcon,
   DashboardIcon,
+  DotsVerticalIcon,
   DoubleArrowLeftIcon,
   GearIcon,
   LayersIcon,
@@ -15,12 +16,14 @@ const AppSidebar = () => {
   const [toggled, setToggled] = React.useState(false);
   const [collapsed, setCollapsed] = React.useState(false);
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div className="flex justify-between flex-col  ">
       <Sidebar
-        backgroundColor="#ffffff"
+        backgroundColor="#fff"
         onBackdropClick={() => setToggled(false)}
         collapsed={collapsed}
         width="280px"
+        style={{ borderRight: "1px solid #ddd", height: "calc(100vh - 50px)" }}
+        // className="border-r"
       >
         <Menu
           rootStyles={{
@@ -84,7 +87,6 @@ const AppSidebar = () => {
             About
           </MenuItem>
           <SubMenu
-            defaultOpen
             label="Carts"
             icon={<ArchiveIcon height="20px" width="20px" />}
           >
@@ -102,6 +104,15 @@ const AppSidebar = () => {
           </MenuItem>
         </Menu>
       </Sidebar>
+      <div className="h-[50px]  flex items-center justify-between px-4 gap-2 border-t border-r">
+        <div className="flex items-center gap-2 ">
+          <div className="p-2 rounded-full bg-stone-200">
+            <PersonIcon />
+          </div>
+          Jhon Doe
+        </div>
+        <DotsVerticalIcon className="cursor-pointer" />
+      </div>
     </div>
   );
 };

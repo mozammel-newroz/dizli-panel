@@ -12,7 +12,9 @@ const Header = ({ title, parent, child, parent_url }: props) => {
     <div className="flex justify-between items-center h-16l border-b p-4">
       <h1 className="text-xl font-bold text-gray-700">{title}</h1>
       <div className="flex gap-2">
-        {parent && <a href={parent_url}>{parent}</a>} /{child}
+        {parent && <a href={parent_url}>{parent}</a>}
+        <span>/</span>
+        {child}
       </div>
     </div>
   );
