@@ -1,6 +1,4 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import TopBar from "./TopBar";
 import AppSidebar from "./AppSidebar";
 
 const Layout = () => {

@@ -22,12 +22,13 @@ const AppSidebar = () => {
         onBackdropClick={() => setToggled(false)}
         collapsed={collapsed}
         width="280px"
+        collapsedWidth="90px"
         style={{ borderRight: "1px solid #ddd", height: "calc(100vh - 50px)" }}
         // className="border-r"
       >
         <Menu
           rootStyles={{
-            [`.ps-menu-button`]: { margin: "12px", borderRadius: "8px" },
+            [`.ps-menu-button`]: { margin: "10px", borderRadius: "8px" },
             [`.ps-menu-icon`]: {
               color: "#333",
               height: "30px",
@@ -35,12 +36,17 @@ const AppSidebar = () => {
             },
             [`.ps-submenu-expand-icon`]: {
               // color: "red",
-              height: "25px",
+              height: "27px",
               // width: "30px",
               [`span`]: {
-                width: "10px",
-                height: "10px",
+                width: "5px",
+                height: "5px",
               },
+            },
+            [`.ps-submenu-expand-icon span`]: {
+              width: "10px",
+              height: "10px",
+              color: "#666",
             },
           }}
           menuItemStyles={{

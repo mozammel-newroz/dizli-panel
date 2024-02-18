@@ -82,7 +82,7 @@ tr {
 }
 td,
 th {
-  @apply py-2 px-4;
+  @apply p-2;
 }
 th {
   /* @apply border-b border-cyan-400; */
