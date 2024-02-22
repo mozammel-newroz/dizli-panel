@@ -93,3 +93,7 @@ th {
 thead {
   @apply border-b;
 }
+
+h1 {
+  font-family: "Protest Riot", sans-serif;
+}

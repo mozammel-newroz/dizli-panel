@@ -115,7 +115,10 @@ const AppSidebar = () => {
           <div className="p-2 rounded-full bg-stone-200">
             <PersonIcon />
           </div>
-          Jhon Doe
+          {
+            !collapsed && "Jhon Doe"
+          }
+          
         </div>
         <DotsVerticalIcon className="cursor-pointer" />
       </div>
